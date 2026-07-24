@@ -1,16 +1,16 @@
-# Graph Report - BuJo  (2026-07-23)
+# Graph Report - BuJo  (2026-07-24)
 
 ## Corpus Check
-- 280 files · ~185,013 words
+- 282 files · ~185,604 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2725 nodes · 2660 edges · 277 communities (252 shown, 25 thin omitted)
+- 2728 nodes · 2662 edges · 278 communities (252 shown, 26 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 13 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `f3c01807`
+- Built from commit: `32ea9ba9`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -264,6 +264,7 @@
 - [[_COMMUNITY_Community 274|Community 274]]
 - [[_COMMUNITY_Community 275|Community 275]]
 - [[_COMMUNITY_Community 276|Community 276]]
+- [[_COMMUNITY_Community 277|Community 277]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `createTestI18n()` - 40 edges
@@ -292,7 +293,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (277 total, 25 thin omitted)
+## Communities (278 total, 26 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.33
@@ -1191,21 +1192,21 @@ Cohesion: 0.50
 Nodes (3): 1. 情境一版面重構：拿掉結束日期選擇器，改為單一日期欄位＋時間範圍, 2. 移除獨立 endDate、拿掉跨午夜特例邏輯, 3. 測試更新與整體驗證
 
 ## Knowledge Gaps
-- **1669 isolated node(s):** `$schema`, `plugins`, `browser`, `correctness`, `$schema` (+1664 more)
+- **1670 isolated node(s):** `graphify`, `$schema`, `plugins`, `browser`, `correctness` (+1665 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **25 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **26 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `createTestI18n()` connect `Community 189` to `Community 0`, `Community 131`, `Community 4`, `Community 73`, `Community 42`, `Community 270`, `Community 208`, `Community 221`, `Community 31`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
+- **Why does `emit` connect `Community 127` to `Community 177`, `Community 3`, `Community 5`, `Community 158`?**
+  _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **Why does `BuJo Visual Specification v1` connect `Community 55` to `Community 64`, `Community 67`, `Community 69`, `Community 233`, `Community 81`, `Community 56`, `Community 57`, `Community 58`, `Community 59`, `Community 60`, `Community 61`, `Community 63`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
-- **Why does `emit` connect `Community 127` to `Community 177`, `Community 3`, `Community 5`, `Community 158`?**
-  _High betweenness centrality (0.000) - this node is a cross-community bridge._
-- **What connects `$schema`, `plugins`, `browser` to the rest of the system?**
-  _1669 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `graphify`, `$schema`, `plugins` to the rest of the system?**
+  _1670 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.05 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
